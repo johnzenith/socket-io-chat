@@ -10,7 +10,7 @@ const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
-const socket = io('http://localhost:3001/');
+const socket = io();
 
 // Join chatroom
 socket.emit('joinRoom', { username, room });
